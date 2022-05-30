@@ -51,7 +51,7 @@ $(function () {
         if (res.status !== 0) return layer.msg("登录失败");
         layer.msg("登录成功");
         localStorage.setItem('token',res.token)
-        // location.href='/index.html'
+        location.href='/index.html'
       },
     });
   });
