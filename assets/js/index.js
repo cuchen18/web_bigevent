@@ -7,7 +7,8 @@ function getInformation() {
     //     Authorization:localStorage.getItem('token')
     // },
     success: (res) => {
-      console.log(res);
+      if (res.status !== 0) return layer.msg;
+      // console.log(res);
       renderAvator(res.data);
     },
   });
@@ -26,7 +27,7 @@ const renderAvator = (user) => {
 };
 // 退出功能
 $("#closebtn").on("click", () => {
-  console.log(123);
+  // console.log(123);
   layui.layer.confirm(
     "确定退出登录？",
     { icon: 3, title: "" },
