@@ -1,3 +1,4 @@
+console.dir($);
 function getInformation() {
   $.ajax({
     type: "GET",
